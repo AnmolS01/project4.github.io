@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Live Cooking Demonstrations</title>
+    <link rel="stylesheet" href="premium-live-cooking.css">
+</head>
+<body>
+    <header>
+        <h1>Premium Live Cooking Demonstrations</h1>
+    </header>
+    <section class="content">
+        <div class="demo-container">
+            <h2>Join Our Premium Live Cooking Demonstrations</h2>
+            <p>Experience the thrill of cooking alongside top chefs in real-time!</p>
+            <button id="joinBtn">Join Now</button>
+            <div id="confirmation" style="display: none;">You've successfully joined the live cooking demonstration!</div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Virtual Chef's Table Experience</p>
+    </footer>
+
+    <script>
+        document.getElementById("joinBtn").addEventListener("click", function() {
+    document.getElementById("confirmation").style.display = "block";
+});
+
+    </script>
+</body>
+</html>

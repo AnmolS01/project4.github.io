@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Occasion Packages - Virtual Chef's Table Experience</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.package-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#confirmation {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Special Occasion Packages</h1>
+    </header>
+    <section class="content">
+        <div class="package-container">
+            <h2>Make Your Occasion Extra Special</h2>
+            <p>Celebrate birthdays, anniversaries, or any special occasion with our tailored packages!</p>
+            <form id="orderForm">
+                <label for="occasion">Select Occasion:</label>
+                <select id="occasion" name="occasion">
+                    <option value="birthday">Birthday Package</option>
+                    <option value="anniversary">Anniversary Package</option>
+                    <option value="datenight">Date Night Package</option>
+                    <option value="custom">Customized Package</option>
+                </select>
+                <button type="submit" id="orderBtn">Order Now</button>
+            </form>
+            <div id="confirmation" style="display: none;">Your order has been placed successfully!</div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Virtual Chef's Table Experience</p>
+    </footer>
+
+    <script>
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get the selected occasion
+    const occasion = document.getElementById("occasion").value;
+
+    // Handle the selected occasion (for demonstration, just showing confirmation)
+    let confirmationMessage = "";
+    switch(occasion) {
+        case "birthday":
+            confirmationMessage = "Your Birthday Package order has been placed successfully!";
+            break;
+        case "anniversary":
+            confirmationMessage = "Your Anniversary Package order has been placed successfully!";
+            break;
+        case "datenight":
+            confirmationMessage = "Your Date Night Package order has been placed successfully!";
+            break;
+        case "custom":
+            confirmationMessage = "Your Customized Package order has been placed successfully!";
+            break;
+        default:
+            confirmationMessage = "Your order has been placed successfully!";
+            break;
+    }
+
+    // Display the confirmation message
+    document.getElementById("confirmation").textContent = confirmationMessage;
+    document.getElementById("confirmation").style.display = "block";
+});
+
+    </script>
+</body>
+</html>
